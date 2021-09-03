@@ -29,7 +29,7 @@ exports.updateTodo = (req, res) => {
   Todo.findOneAndUpdate(
     { _id: req.params._id },
     req.body,
-    { new: true },
+    { new: false },
     (err, todo) => {
       if (err) {
         res.status(500).send(err);
